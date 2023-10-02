@@ -1,1 +1,21 @@
+Composite: When I open Main application page
+Given I am on main application page
+When I wait until element located by `caseSensitiveText(Swag Labs)` appears
+Then `${current-page-url}` is equal to `https://www.saucedemo.com/`
+When I take screenshot
 
+Composite: Given I Log in as a Good User
+When I enter `${swagGoodUserName}` in field located by `By.id(user-name)`
+And I enter `${swagPassword}` in field located by `By.id(password)`
+And I click on element located `By.id(login-button)`
+Then the page with the URL 'https://www.saucedemo.com/inventory.html' is loaded
+And number of elements found by `By.CssSelector(.inventory_item)` is equal to `6`
+When I take screenshot
+
+Composite: Given I Log in as a Broken User
+When I enter `${swagBrokenUserName}` in field located by `By.id(user-name)`
+And I enter `${swagPassword}` in field located by `By.id(password)`
+And I click on element located `By.id(login-button)`
+Then the page with the URL 'https://www.saucedemo.com/inventory.html' is loaded
+And number of elements found by `By.CssSelector(.inventory_item)` is equal to `6`
+When I take screenshot
