@@ -1,2 +1,16 @@
 {
+    "BUG-001": { 
+        "type": "Internal",
+        "assertionPattern": ".*Expected: \"https:\\/\\/www.saucedemo.com\\/inventory.html\" Actual: was \"https:\\/\\/www.saucedemo.com\\/\".*",
+        "scenarioPattern": "Log in as Locked User",
+        "stepPattern": "Then .* is equal to .*",
+        "description": "Issue with locked user is to be fixed in the upcoming release"
+    },
+    "BUG-002": { 
+        "type": "Internal",
+        "assertionPattern": ".*Expected: number of elements is a value equal to .* Actual: .*",
+        "scenarioPattern": "Log in as Locked User",
+        "stepPattern": "Then number of elements found by .* is .*", 
+        "description": "Issue with locked user is to be fixed in the upcoming release"
+    }
 }
