@@ -29,9 +29,9 @@ When I take screenshot
 Scenario: Complete checkout process
 When I click on element located by `By.id(continue)`
 When I click on element located by `By.id(finish)`
-When I save text of context element to `By.cssSelector('.complete-header')` variable `$thankYouMessage` 
-
-
-
-
+When I change context to element located by `By.cssSelector(.complete-header)`
+When I save text of context element to scenario variable `thankYouMessageScreen`
+Given I initialize scenario variable `thankYouMessageContents` with value `#{loadResource(/data/message.txt)}`
+Then `${thankYouMessageScreen}` is equal to `${thankYouMessageContents}` 
+Then `#{eval(`${thankYouMessageScreen}` == `${thankYouMessageContents}`)}` is equal to `true`
 When I take screenshot
