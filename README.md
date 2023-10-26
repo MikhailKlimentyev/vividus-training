@@ -47,3 +47,21 @@
 1. Zip the second Allure report that contains the comparison result, and then upload the zipped file to the designated practical task page in the course. Your mentor will review it once you submit all the tasks.
 
 1. Once the task is completed, make sure to commit all your local changes with commit message "{yourSurname}" to your current local branch.
+
+=========================================================
+1) To skip scenario: 
+Meta: 
+@skip
+Given I am on main application page
+
+2) Comment
+!-- When I log in as an user with `${swagGoodUserName}` and `${swagPassword}`
+
+3) Comment in properties
+# pick up environment related properties from 'saucedemo' environment folder:
+
+4) Check all possible steps
+ctrl + J
+
+5) Align table
+ctrl + F
